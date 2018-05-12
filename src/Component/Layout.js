@@ -1,16 +1,16 @@
 import React from 'react'
  import {Layout, Menu, Breadcrumb,Icon} from 'antd';
-// import {
-//   // BrowserRouter as Router,
-//   Route,
-//   // Switch,
-//   Link
-// } from 'react-router-dom';
-// // 按需加载
-// import async from '../async';
-// import './Layout.css';
-// let ButtonDemo = async(() => import("./ButtonDemo"));
-// let MyTable = async(() => import("./Table"));
+import {
+  // BrowserRouter as Router,
+  Route,
+  // Switch,
+  Link
+} from 'react-router-dom';
+// 按需加载
+import async from '../async';
+import './Layout.css';
+let ButtonDemo = async(() => import("./ButtonDemo"));
+let MyTable = async(() => import("./Table"));
 // /*****************************/
  const { Header, Content, Footer, Sider } = Layout;
  const SubMenu = Menu.SubMenu;
@@ -44,12 +44,12 @@ class MyLayout extends React.Component {
             <Menu.Item key="1">
               <Icon type="pie-chart" />
               <span>Home Page</span>
-              {/* <Link to='/'></Link> */}
+              <Link to='/'></Link>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="desktop" />
               <span>Table</span>
-              {/* <Link to='/Table'></Link> */}
+              <Link to='/Table'></Link>
               {/* <Link to="/"></Link> */}
             </Menu.Item>
             <SubMenu
@@ -88,8 +88,8 @@ class MyLayout extends React.Component {
             </Breadcrumb>
             {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
             </div> */}
-            {/* <Route path='/' exact component={ButtonDemo}></Route>
-            <Route path='/Table' exact component={MyTable}></Route> */}
+            <Route path='/' exact component={ButtonDemo}></Route>
+            <Route path='/Table' exact component={MyTable}></Route>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
             Ant Design ©2016 Created by Ant UED

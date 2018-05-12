@@ -1,12 +1,12 @@
-import React, { Component } from 'react';
-import { Button } from 'antd';
+import React, {Component} from 'react';
 import './App.css';
+import MyLayout from './Component/Layout';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <Button type="primary">Button</Button>
+        <MyLayout/>
       </div>
     );
   }
