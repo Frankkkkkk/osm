@@ -1,5 +1,5 @@
 import React from 'react'
- import {Layout, Menu, Breadcrumb,Icon} from 'antd';
+import {Layout, Menu, Breadcrumb,Icon} from 'antd';
 import {
   // BrowserRouter as Router,
   Route,
@@ -9,14 +9,40 @@ import {
 // 按需加载
 import async from '../async';
 import './Layout.css';
-let ButtonDemo = async(() => import("./ButtonDemo"));
+/*****************************/
+// import { ChartCard, MiniBar } from 'components/Charts';
+// import { Tooltip } from 'antd';
+/*****************************/
+let BarChart = async(() => import("./Charts/MiniBarChart"));
 let MyTable = async(() => import("./Table"));
-// /*****************************/
+/*****************************/
  const { Header, Content, Footer, Sider } = Layout;
  const SubMenu = Menu.SubMenu;
+/*****************************/
 
-// import ButtonDemo from './ButtonDemo'
-// import InputDemo from './InputDemo'
+/*****************************/
+        //Barchart//
+/*****************************/
+// const visitData = [
+//   {
+//     x: "2017-09-01",
+//     y: 100
+//   },
+//   {
+//     x: "2017-09-02",
+//     y: 120
+//   },
+//   {
+//     x: "2017-09-03",
+//     y: 88
+//   },
+//   {
+//     x: "2017-09-04",
+//     y: 65
+//   }
+// ];
+
+/*****************************/
 
 
 class MyLayout extends React.Component {
@@ -42,13 +68,13 @@ class MyLayout extends React.Component {
           <div className="logo" />
           <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline">
             <Menu.Item key="1">
-              <Icon type="pie-chart" />
-              <span>Home Page</span>
+              <Icon type="compass" />
+              <span>Dashboard</span>
               <Link to='/'></Link>
             </Menu.Item>
             <Menu.Item key="2">
               <Icon type="desktop" />
-              <span>Table</span>
+              <span>Products</span>
               <Link to='/Table'></Link>
               {/* <Link to="/"></Link> */}
             </Menu.Item>
@@ -88,7 +114,7 @@ class MyLayout extends React.Component {
             </Breadcrumb>
             {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
             </div> */}
-            <Route path='/' exact component={ButtonDemo}></Route>
+            <Route path='/' exact component={BarChart}></Route>
             <Route path='/Table' exact component={MyTable}></Route>
           </Content>
           <Footer style={{ textAlign: 'center' }}>

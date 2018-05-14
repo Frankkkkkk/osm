@@ -6,8 +6,6 @@ class ButtonDemo extends React.Component {
     return (
       <div>
         <Button>BUTTON</Button>
-        {/* <Link to='/Table'></Link>
-        <Route path='/Table' exact component={MyTable}></Route> */}
       </div>
     )
   }
