@@ -15,6 +15,7 @@ import './Layout.css';
 /*****************************/
 let BarChart = async(() => import("./Charts/MiniBarChart"));
 let MyTable = async(() => import("./Table"));
+let UserLayout = async(() => import("./Login"));
 /*****************************/
  const { Header, Content, Footer, Sider } = Layout;
  const SubMenu = Menu.SubMenu;
@@ -23,24 +24,7 @@ let MyTable = async(() => import("./Table"));
 /*****************************/
         //Barchart//
 /*****************************/
-// const visitData = [
-//   {
-//     x: "2017-09-01",
-//     y: 100
-//   },
-//   {
-//     x: "2017-09-02",
-//     y: 120
-//   },
-//   {
-//     x: "2017-09-03",
-//     y: 88
-//   },
-//   {
-//     x: "2017-09-04",
-//     y: 65
-//   }
-// ];
+
 
 /*****************************/
 
@@ -80,9 +64,13 @@ class MyLayout extends React.Component {
             </Menu.Item>
             <SubMenu
               key="sub1"
-              title={<span><Icon type="user" /><span>User</span></span>}
+              title={<span><Icon type="user" /><span>Login</span></span>}
             >
-              <Menu.Item key="3">Tom</Menu.Item>
+              <Menu.Item key="3">
+                <Icon type="desktop" />
+                <span>Login</span>
+                <Link to='/Login'></Link>
+              </Menu.Item>
               <Menu.Item key="4">Bill</Menu.Item>
               <Menu.Item key="5">Alex</Menu.Item>
             </SubMenu>
@@ -116,6 +104,7 @@ class MyLayout extends React.Component {
             </div> */}
             <Route path='/' exact component={BarChart}></Route>
             <Route path='/Table' exact component={MyTable}></Route>
+            <Route path='/Login' exact component={UserLayout}></Route>
           </Content>
           <Footer style={{ textAlign: 'center' }}>
             Ant Design ©2016 Created by Ant UED
