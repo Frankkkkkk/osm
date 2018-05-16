@@ -1,7 +1,5 @@
-
 import React from 'react';
-import ReactDOM from 'react-dom';
-import 'antd/dist/antd.css';
+//import 'antd/dist/antd.css';
 import './Login.css';
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 const FormItem = Form.Item;
@@ -53,4 +51,4 @@ class UserLayout extends React.Component {
 
 const WrappedUserLayout = Form.create()(UserLayout);
 
-export default UserLayout;
+export default WrappedUserLayout;
