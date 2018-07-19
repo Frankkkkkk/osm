@@ -1,3 +1,7 @@
+/*****************************/
+//This page for the whole project Layout.
+/*****************************/
+
 import React from 'react'
 import {Layout, Menu, Breadcrumb, Icon} from 'antd';
 import {
@@ -6,7 +10,6 @@ import {
   // Switch,
   Link
 } from 'react-router-dom';
-// 按需加载
 import async from '../async';
 import './Layout.css';
 import HeaderSearch from 'ant-design-pro/lib/HeaderSearch';
@@ -89,16 +92,8 @@ class MyLayout extends React.Component {
           }}>
           <Icon className="trigger" type={this.state.collapsed
               ? 'menu-unfold'
-              : 'menu-fold'} onClick={this.toggle}/> {/* <div style={{
-              textAlign: 'right',
-              height: '64px',
-              lineHeight: '64px',
-              boxShadow: '0 1px 4px rgba(0,21,41,.12)',
-              // padding: '0 32px',
-              width: '400px'
-            }}> */
-          }
-          <HeaderSearch placeholder="站内搜索" dataSource={['搜索提示一', '搜索提示二', '搜索提示三']} onSearch={(value) => {
+              : 'menu-fold'} onClick={this.toggle}/>
+          <HeaderSearch placeholder="Site search" dataSource={['Tip 1', 'Tip 2', 'Tip 3']} onSearch={(value) => {
               console.log('input', value); // eslint-disable-line
             }} onPressEnter={(value) => {
               console.log('enter', value); // eslint-disable-line
@@ -111,20 +106,17 @@ class MyLayout extends React.Component {
               margin: '16px 0'
             }}>
             <Breadcrumb.Item>User</Breadcrumb.Item>
-            {/* <Breadcrumb.Item>Bill</Breadcrumb.Item> */}
           </Breadcrumb>
-          {/* <div style={{ padding: 24, background: '#fff', minHeight: 360 }}>
-            </div> */
-          }
           <Route path='/' exact="exact" component={BarChart}></Route>
           <Route path='/Table' exact="exact" component={MyTable}></Route>
           <Route path='/Login' exact="exact" component={UserLayout}></Route>
           <Route path='/Register' exact="exact" component={RegistrationForm}></Route>
+          {/* this router for the whole project */}
         </Content>
         <Footer style={{
             textAlign: 'center'
           }}>
-          Ant
+          Frank Huo
         </Footer>
       </Layout>
     </Layout>
