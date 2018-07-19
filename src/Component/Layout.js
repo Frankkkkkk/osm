@@ -89,21 +89,20 @@ class MyLayout extends React.Component {
           }}>
           <Icon className="trigger" type={this.state.collapsed
               ? 'menu-unfold'
-              : 'menu-fold'} onClick={this.toggle}/>
-          {/* <div style={{
+              : 'menu-fold'} onClick={this.toggle}/> {/* <div style={{
               textAlign: 'right',
               height: '64px',
               lineHeight: '64px',
               boxShadow: '0 1px 4px rgba(0,21,41,.12)',
               // padding: '0 32px',
               width: '400px'
-            }}> */}
-            <HeaderSearch placeholder="站内搜索" dataSource={['搜索提示一', '搜索提示二', '搜索提示三']} onSearch={(value) => {
-                console.log('input', value); // eslint-disable-line
-              }} onPressEnter={(value) => {
-                console.log('enter', value); // eslint-disable-line
-              }}/>
-          {/* </div> */}
+            }}> */
+          }
+          <HeaderSearch placeholder="站内搜索" dataSource={['搜索提示一', '搜索提示二', '搜索提示三']} onSearch={(value) => {
+              console.log('input', value); // eslint-disable-line
+            }} onPressEnter={(value) => {
+              console.log('enter', value); // eslint-disable-line
+            }}/> {/* </div> */}
         </Header>
         <Content style={{
             margin: '0 16px'
@@ -125,34 +124,11 @@ class MyLayout extends React.Component {
         <Footer style={{
             textAlign: 'center'
           }}>
-          Ant Design ©2016 Created by Ant UED
+          Ant
         </Footer>
       </Layout>
     </Layout>
-    //   )
-    //   return(
-    //     <div
-    //   style={{
-    //     textAlign: 'right',
-    //     height: '64px',
-    //     lineHeight: '64px',
-    //     boxShadow: '0 1px 4px rgba(0,21,41,.12)',
-    //     padding: '0 32px',
-    //     width: '400px',
-    //   }}
-    // >
-    //   <HeaderSearch
-    //     placeholder="站内搜索"
-    //     dataSource={['搜索提示一', '搜索提示二', '搜索提示三']}
-    //     onSearch={(value) => {
-    //       console.log('input', value);  eslint-disable-line
-    //     }}
-    //     onPressEnter={(value) => {
-    //       console.log('enter', value);  eslint-disable-line
-    //     }}
-    //   />
-    // </div>);
-    );
+    )
   }
 }
 

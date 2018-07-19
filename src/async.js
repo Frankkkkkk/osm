@@ -1,6 +1,7 @@
 import React from 'react';
 // import "babel-polyfill";
-//componentFactory是一个函数,可以异步加载组件,import方法会返回一个promise,promise完成后会resolve一个对象 {default:组件}
+//componentFactory is a function,Components can be loaded asynchronously,
+//import方法会返回一个promise,promise完成后会resolve一个对象 {default:组件}
 export default function (componentFactory) {
   class AsyncComponent extends React.Component {
     constructor() {
